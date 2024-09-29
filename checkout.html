@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Restoran Maju Jaya</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0055aa;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #0055aa;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #004499;
+    }
+
+    .checkbox {
+      margin-top: 15px;
+    }
+    .month {
+      left: 30px; /* Geser 20px ke kanan */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <main>
+    <section class="checkout-section">
+      <h2>Rincian Pemesanan</h2>
+      <ul>
+        <li>Nasi Goreng Spesial - 2 Porsi
+          <input type="datetime-local">
+        </li>
+        </li>
+        <li>Jus Jeruk Segar - 1 Gelas
+          <input type="datetime-local">
+        </li>
+      </ul>
+      <h2>Informasi Pembayaran</h2>
+      <form>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Alamat Pengiriman:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="payment-method">Metode Pembayaran:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="credit-card">Kartu Kredit</option>
+          <option value="debit-card">Kartu Debit</option>
+          <option value="cash">Tunai</option>
+          <option value="bank-transfer">Transfer Bank</option>
+          <option value="e-wallet">Dompet Elektronik</option>
+          <option value="paypal">PayPal</option>
+          <option value="cryptocurrency">Cryptocurrency</option>
+          <option value="gift-card">Kartu Hadiah</option>
+          <option value="gopay">GoPay</option>
+          <option value="dana">DANA</option>
+          <option value="shopeepay">ShopeePay</option>
+          <option value="shopeepay">Bayar Di Tempat</option>
+        </select>        
+
+        <div class="checkbox">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">Saya setuju dengan <a href="#">syarat dan ketentuan</a></label>
+        </div>
+
+        <button type="submit">Selesaikan Pembayaran</button>
+      </form>
+    </section>
+  </main>
+   <!-- Navigasi Bawah -->
+   <div class="bottom-nav">
+    <a href="login.html">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="favorit.html">
+        <i class="fas fa-star"></i>
+    </a>
+    <a href="profile.html">
+        <i class="fas fa-user"></i>
+    </a>
+  </div>
+</body>
+</html>

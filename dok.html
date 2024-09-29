@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #0055aa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            color: white;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            background: #004a99;
+            border-radius: 5px;
+        }
+        .sidebar ul li a:hover {
+            background: #007bff;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Pengaturan</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h2>Dashboard</h2>
+            <div>
+                <span>Notifikasi</span>
+                <span> | </span>
+                <span>Profil</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h3>Statistik</h3>
+                <p>Informasi mengenai statistik penggunaan.</p>
+            </div>
+            <div class="card">
+                <h3>Laporan</h3>
+                <p>Detail laporan terbaru Anda.</p>
+            </div>
+            <div class="card">
+                <h3>Aktivitas Terbaru</h3>
+                <p>Lihat aktivitas terbaru pengguna.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 - Dashboard App</p>
+        </div>
+    </div>
+
+</body>
+</html>

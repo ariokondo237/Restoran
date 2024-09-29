@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Tambahkan gaya CSS di sini */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #196ca0;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .login-section {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #35424a;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+            // Di sini, Anda dapat menambahkan logika validasi pengguna dan kata sandi
+            // Jika validasi berhasil, redirect ke index.html
+            window.location.href = "index.html"; // Arahkan ke index.html
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Login ke Akun Anda</h1>
+    </header>
+    <main>
+        <section class="login-section">
+            <form onsubmit="handleLogin(event)"> <!-- Panggil fungsi JavaScript -->
+                <label for="username">Nama Pengguna:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Kata Sandi:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Masuk</button>
+            </form>
+            <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+        </section>
+    </main>
+</body>
+</html>

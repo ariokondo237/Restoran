@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Restoran Maju Jaya</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff4b1f, #1fddff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .menu-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .menu-section h2 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background: #eaeaea;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #00000080;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  display: inline-block; /* Agar link terlihat seperti tombol */
+  background-color: blue;
+}
+
+.button:hover,
+.button:focus {
+  scale: 1.1;
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+    button:hover,
+    button:focus {
+      scale: 1.1;
+      color: #ffffff;
+      background: #008cff;
+      border: 1px solid #008cff;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+      box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+        0 0 100px #008cff;
+    }
+
+    li:hover {
+      background: #d4d4d4;
+      transition: background 0.3s;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .menu-section {
+        padding: 15px;
+      }
+
+      button {
+        width: 50%; /* Sesuaikan lebar tombol di perangkat mobile */
+        font-size: 14px; /* Kurangi ukuran font di layar kecil */
+        margin-left: 10px; /* Kurangi margin pada layar kecil */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Menu Restoran Kami</h1>
+  </header>
+  <main>
+    <section class="menu-section">
+      <h2>Daftar Menu</h2>
+      <form action="pesan.html" method="POST" enctype="multipart/form-data">
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="menu[]" value="Nasi Goreng Spesial">
+              Nasi Goreng Spesial
+            </label>
+            <span>Rp 30.000</span>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="menu[]" value="Sate Ayam">
+              Sate Ayam
+            </label>
+            <span>Rp 25.000</span>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="menu[]" value="Es Teh Manis">
+              Es Teh Manis
+            </label>
+            <span>Rp 8.000</span>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="menu[]" value="Jus Jeruk Segar">
+              Jus Jeruk Segar
+            </label>
+            <span>Rp 10.000</span>
+          </li>
+        </ul>
+
+        <div>
+          <label for="upload">Upload Bukti Pembayaran:</label>
+          <input type="file" id="upload" name="bukti_pembayaran">
+        </div>
+       <br></form>
+       <a id="btn" href="checkout.html" class="button">Pesan</a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

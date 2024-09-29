@@ -1,0 +1,231 @@
+/* Menghapus margin dan padding bawaan */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  min-height: 100vh; /* Pastikan body memiliki tinggi minimal 100% dari viewport */
+  scroll-margin-left: 1.3;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: blue;
+}
+
+/* Header */
+.header {
+  position: relative;
+  height: 250px;
+  background-image: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header overlay */
+.header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.header h1, .header p {
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Warna khusus untuk masing-masing item */
+#menu {
+  background-color: #f9022d; /* Merah terang */
+  color: white;
+}
+
+#cart {
+  background-color: #02a0f9; /* Biru muda */
+  color: white;
+}
+
+#reservation {
+  background-color: #f9a502; /* Oranye */
+  color: white;
+}
+
+#gallery {
+  background-color: #6d02f9; /* Ungu */
+  color: white;
+}
+
+#news {
+  background-color: #02f95e; /* Hijau */
+  color: white;
+}
+
+#location {
+  background-color: #f9028e; /* Pink cerah */
+  color: white;
+}
+
+/* Warna khusus untuk navigasi bawah */
+.bottom-nav {
+  background-color: #000; /* Hitam */
+  color: white;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Backgrounds for Cart and Gallery */
+#cart {
+  background-image: url('cart-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#gallery {
+  background-image: url('gallery-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Icon and text styling */
+.grid-item i {
+  font-size: 2rem;
+  color: #0055aa;
+}
+
+.grid-item p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Bottom Navigation */
+.grid-container {
+  flex-grow: 1; /* Memastikan konten di atas .bottom-nav bisa mengambil ruang yang ada */
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #aaa2a2;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-display: 10px;
+  scrollbar-width: 10px;
+}
+.bottom-nav i {
+  font-size: 1.5rem;
+}
+
+/* Drawer Navigation */
+.drawer {
+  width: 250px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the drawer initially */
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+.drawer.open {
+  left: 0; /* Show the drawer when open */
+}
+
+.drawer-header {
+  background-color: #0055aa;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.drawer-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.drawer-header h2 {
+  font-size: 1.4rem;
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 20px;
+}
+
+.drawer-menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.drawer-menu li i {
+  margin-right: 15px;
+  color: #0055aa;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.hamburger i {
+  color: black;
+  font-size: 2rem;
+}
+
+/* X icon ketika drawer dibuka */
+.hamburger.open i::before {
+  content: "\f00d"; /* Icon X dari FontAwesome */
+}
+
+/* Hover effect */
+.hamburger:hover {
+  background-color: #b7c3d0;
+  border-radius: 5px;
+}
+
+
